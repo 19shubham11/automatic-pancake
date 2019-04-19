@@ -18,4 +18,6 @@ app.use(async (ctx, next) => {
 app
     .use(router.routes())
     .use(router.allowedMethods())
-    .listen(3000);
+    .listen(3000, () => {
+        console.log('Koa Server running on port 3000');
+    });
